@@ -51,7 +51,9 @@ All data is stored locally on the device, so no backend or API keys are needed.
 
 ## Background
 
-MoodMate started as a two-person course project, where I was the lead developer. After the course I refreshed the UI (readable card layouts, a consistent type and button style, cleaner mood icons, and a card-based history) and replaced plain-text password storage with salted hashing.
+In our second year, we came up with the idea for an app that lets people express their emotions, in response to rising rates of depression, anxiety, and suicide. We set out to combine mood tracking, personalized entertainment, and social connection in one app, so that instead of simply recording how they feel, users can take action based on it.
+
+MoodMate was a two-person project for our App Development course. As lead developer, I focused on building the app in Android Studio. After the course, I refreshed the UI (readable card layouts, a consistent type and button style, cleaner mood icons, and a card-based history) and replaced plain-text password storage with salted hashing.
 
 ## Author
 
