@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@android:interpolator/bounce">
+
+    <!-- Fade in effect (only once at the start) -->
+    <alpha
+        android:duration="1000"
+        android:fromAlpha="0.0"
+        android:toAlpha="1.0" />
+
+    <!-- Gentle pulsing effect -->
+    <scale
+        android:duration="1500"
+        android:fromXScale="0.97"
+        android:toXScale="1.03"
+        android:fromYScale="0.97"
+        android:toYScale="1.03"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:repeatMode="reverse"
+        android:repeatCount="infinite" />
+</set>

@@ -1,0 +1,142 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_image">
+
+    <!-- Logout Button -->
+    <ImageButton
+        android:id="@+id/btnLogout"
+        style="@style/MM.IconButton"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="20dp"
+        android:contentDescription="Log out"
+        android:src="@drawable/logout_icon" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- App Title -->
+        <TextView
+            android:id="@+id/appTitle"
+            style="@style/MM.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MoodMate!" />
+
+        <!-- App Logo -->
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="20dp"
+            android:contentDescription="MoodMate logo"
+            android:src="@drawable/moodmate_logo" />
+
+        <LinearLayout
+            style="@style/MM.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <!-- Greeting Text -->
+            <TextView
+                android:id="@+id/tvGreeting"
+                style="@style/MM.Heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hello!"
+                android:textSize="26sp" />
+
+            <!-- Mood Prompt -->
+            <TextView
+                android:id="@+id/tvPrompt"
+                style="@style/MM.Body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="How are you feeling today?" />
+
+            <LinearLayout
+                android:id="@+id/moodButtonsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal">
+
+                <!-- Mood Selection Button -->
+                <LinearLayout
+                    android:id="@+id/btnMoodSelection"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mm_tile_primary"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/face_happy" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="Log a mood"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="12dp"
+                    android:layout_height="1dp" />
+
+                <!-- Mood Tracker Button -->
+                <LinearLayout
+                    android:id="@+id/btnMoodTracker"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mm_tile_secondary"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/mm_icon_button"
+                        android:backgroundTint="@color/mm_primary_soft"
+                        android:contentDescription="@null"
+                        android:padding="16dp"
+                        android:src="@drawable/ic_history"
+                        android:tint="@color/mm_primary" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="Mood history"
+                        android:textColor="@color/mm_ink"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

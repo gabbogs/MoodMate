@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Frosted white card that sits over the sky background -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/mm_card"/>
+    <corners android:radius="28dp"/>
+    <stroke android:width="1dp" android:color="@color/mm_card_stroke"/>
+</shape>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_image"
+    android:orientation="vertical"
+    android:paddingStart="24dp"
+    android:paddingTop="48dp"
+    android:paddingEnd="24dp"
+    tools:context=".MoodTrackerActivity">
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        style="@style/MM.IconButton"
+        android:contentDescription="Back"
+        android:src="@drawable/ic_back" />
+
+    <!-- Title -->
+    <TextView
+        style="@style/MM.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Mood history"
+        android:textSize="30sp" />
+
+    <!-- Progress Bar (Loading Indicator) -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="32dp"
+        android:indeterminateTint="@color/white"
+        android:visibility="gone" />
+
+    <!-- No Data Message -->
+    <TextView
+        android:id="@+id/emptyTextView"
+        style="@style/MM.Card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="No moods logged yet. Your entries will show up here."
+        android:textColor="@color/mm_muted"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+    <!-- Mood History List -->
+    <ListView
+        android:id="@+id/listMoodHistory"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp"
+        android:clipToPadding="false"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="12dp"
+        android:paddingBottom="24dp"
+        android:scrollbars="none" />
+</LinearLayout>

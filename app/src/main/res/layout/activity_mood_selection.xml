@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_image"
+    android:fillViewport="true"
+    tools:context=".MoodSelectionActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="24dp"
+        android:paddingTop="48dp"
+        android:paddingEnd="24dp"
+        android:paddingBottom="24dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            style="@style/MM.IconButton"
+            android:contentDescription="Back"
+            android:src="@drawable/ic_back" />
+
+        <!-- Title -->
+        <TextView
+            style="@style/MM.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="How are you feeling?"
+            android:textSize="30sp" />
+
+        <LinearLayout
+            style="@style/MM.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/MM.Heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pick a mood"
+                android:textSize="18sp" />
+
+            <!-- Mood Buttons -->
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:columnCount="3"
+                android:rowCount="2">
+
+                <LinearLayout
+                    android:id="@+id/btn_happy"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/mm_mood_cell"
+                    android:clickable="true"
+                    android:contentDescription="Happy"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/face_happy" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="Happy"
+                        android:textColor="@color/mm_ink"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btn_sad"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/mm_mood_cell"
+                    android:clickable="true"
+                    android:contentDescription="Sad"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/face_sad" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="Sad"
+                        android:textColor="@color/mm_ink"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btn_stressed"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/mm_mood_cell"
+                    android:clickable="true"
+                    android:contentDescription="Stressed"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/face_stressed" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="Stressed"
+                        android:textColor="@color/mm_ink"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btn_excited"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/mm_mood_cell"
+                    android:clickable="true"
+                    android:contentDescription="Excited"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/face_excited" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="Excited"
+                        android:textColor="@color/mm_ink"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btn_calm"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/mm_mood_cell"
+                    android:clickable="true"
+                    android:contentDescription="Calm"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/face_calm" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="Calm"
+                        android:textColor="@color/mm_ink"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btn_angry"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/mm_mood_cell"
+                    android:clickable="true"
+                    android:contentDescription="Angry"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/face_angry" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="Angry"
+                        android:textColor="@color/mm_ink"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </GridLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@color/mm_field_stroke" />
+
+            <!-- Intensity -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/MM.Heading"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="How strong is it?"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tvIntensityValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/mm_chip"
+                    android:fontFamily="sans-serif-medium"
+                    android:paddingStart="12dp"
+                    android:paddingTop="4dp"
+                    android:paddingEnd="12dp"
+                    android:paddingBottom="4dp"
+                    android:text="5 / 10"
+                    android:textColor="@color/mm_primary"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <!-- Mood Intensity Slider -->
+            <SeekBar
+                android:id="@+id/seekBarMoodIntensity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:max="10"
+                android:progress="5"
+                android:progressTint="@color/mm_primary"
+                android:progressBackgroundTint="@color/mm_field_stroke"
+                android:thumbTint="@color/mm_primary" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp">
+
+                <TextView
+                    style="@style/MM.Body"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Mild"
+                    android:textSize="13sp" />
+
+                <TextView
+                    style="@style/MM.Body"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Strong"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <!-- Save Button -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_save_mood"
+                style="@style/MM.Button"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="24dp"
+                android:text="Save mood" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

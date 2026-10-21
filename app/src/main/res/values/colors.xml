@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blue_light">#87CEEB</color>
+    <color name="pink_light">#FF69B4</color>
+    <color name="blue_dark">#4682B4</color>
+    <color name="black">#000000</color>
+    <color name="dark_gray">#121212</color>
+    <color name="white">#FFFFFF</color>
+    <color name="teal_200">#03DAC5</color>
+    <color name="colorPrimary">#6200EE</color>
+
+    <!-- UI refresh palette: deep purple ink on frosted white cards over the pastel sky -->
+    <color name="mm_ink">#3B2E5A</color>
+    <color name="mm_muted">#7A6E96</color>
+    <color name="mm_primary">#8B5CF6</color>
+    <color name="mm_primary_soft">#F1ECFD</color>
+    <color name="mm_card">#EBFFFFFF</color>
+    <color name="mm_card_stroke">#B3FFFFFF</color>
+    <color name="mm_field">#F6F3FC</color>
+    <color name="mm_field_stroke">#E4DDF3</color>
+    <color name="mm_gradient_start">#70D6FF</color>
+    <color name="mm_gradient_end">#9B5DE5</color>
+</resources>

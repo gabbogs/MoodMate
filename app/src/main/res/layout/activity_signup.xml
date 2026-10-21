@@ -1,0 +1,148 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_image"
+    android:fillViewport="true"
+    tools:context=".SignUpActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/appTitle"
+            style="@style/MM.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MoodMate!" />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="20dp"
+            android:contentDescription="MoodMate logo"
+            android:src="@drawable/moodmate_logo" />
+
+        <LinearLayout
+            style="@style/MM.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/MM.Heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create your account"
+                android:textSize="24sp" />
+
+            <TextView
+                style="@style/MM.Body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="20dp"
+                android:text="Start tracking how you feel, one day at a time." />
+
+            <LinearLayout
+                style="@style/MM.Field"
+                android:layout_width="match_parent"
+                android:layout_height="56dp">
+
+                <ImageView
+                    style="@style/MM.FieldIcon"
+                    android:src="@drawable/ic_user" />
+
+                <EditText
+                    android:id="@+id/etName"
+                    style="@style/MM.FieldInput"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="Full name" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/MM.Field"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="12dp">
+
+                <ImageView
+                    style="@style/MM.FieldIcon"
+                    android:src="@drawable/ic_user" />
+
+                <EditText
+                    android:id="@+id/etUsername"
+                    style="@style/MM.FieldInput"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="Username" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/MM.Field"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="12dp">
+
+                <ImageView
+                    style="@style/MM.FieldIcon"
+                    android:src="@drawable/ic_lock" />
+
+                <EditText
+                    android:id="@+id/etPassword"
+                    style="@style/MM.FieldInput"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="Password"
+                    android:inputType="textPassword" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/MM.Body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="8+ characters with a capital letter, a number, and a symbol."
+                android:textSize="13sp" />
+
+            <!-- Show Password Switch -->
+            <Switch
+                android:id="@+id/showPasswordSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Show password  "
+                android:textColor="@color/mm_muted"
+                android:textSize="15sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSignUp"
+                style="@style/MM.Button"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="20dp"
+                android:text="Sign up" />
+
+            <TextView
+                android:id="@+id/tvLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="Already have an account? Log in"
+                android:textColor="@color/mm_primary"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

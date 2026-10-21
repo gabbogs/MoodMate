@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Round frosted background for back / logout buttons -->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="#338B5CF6">
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/mm_card"/>
+        </shape>
+    </item>
+</ripple>
