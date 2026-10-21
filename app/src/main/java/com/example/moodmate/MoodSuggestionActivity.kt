@@ -9,13 +9,10 @@ import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
 import androidx.core.content.ContextCompat
-import androidx.lifecycle.lifecycleScope
-import kotlinx.coroutines.launch
 
 class MoodSuggestionActivity : AppCompatActivity() {
 
     private var mediaPlayer: MediaPlayer? = null
-    private lateinit var moodDatabase: MoodDatabase
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,10 +39,6 @@ class MoodSuggestionActivity : AppCompatActivity() {
         tvSuggestion.startAnimation(fadeIn)
 
         addQuickActionButtons(mood, intensity, actionButtonsLayout)
-
-        moodDatabase = MoodDatabase.getDatabase(this)
-
-        saveMoodToDatabase(mood, intensity)
 
         if (mood == "Calm" || (mood == "Sad" && intensity > 7)) {
             playRelaxingMusic()
@@ -97,24 +90,6 @@ class MoodSuggestionActivity : AppCompatActivity() {
             "Angry" -> Toast.makeText(this, "Doing deep breathing...", Toast.LENGTH_SHORT).show()
             else -> Toast.makeText(this, "No action available", Toast.LENGTH_SHORT).show()
         }
-    }
-
-    private fun saveMoodToDatabase(mood: String, intensity: Int) {
-        val userId = getCurrentUserId()
-        lifecycleScope.launch {
-            if (userId != null) {
-                val moodEntry = MoodEntry(userId = userId, mood = mood, intensity = intensity)
-                moodDatabase.moodDao().insertMood(moodEntry)
-            }
-            runOnUiThread {
-                Toast.makeText(this@MoodSuggestionActivity, "Mood Saved Successfully!", Toast.LENGTH_SHORT).show()
-            }
-        }
-    }
-
-    private fun getCurrentUserId(): Int? {
-        val sharedPreferences = getSharedPreferences("UserSession", MODE_PRIVATE)
-        return sharedPreferences.getInt("USER_ID", -1).takeIf { it != -1 }
     }
 
     private fun getSuggestion(mood: String, intensity: Int): String {

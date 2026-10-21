@@ -1,14 +1,5 @@
 <resources>
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:buttonStyle">@style/CustomButtonStyle</item>
-    </style>
-
-    <style name="CustomButtonStyle" parent="Widget.AppCompat.Button">
-        <item name="android:background">@drawable/gradient_button</item>
-        <item name="android:textColor">#FFFFFF</item>
-    </style>
-
-    <!-- UI refresh: shared text and component styles (MM.* styles inherit from this empty base) -->
+    <!-- Shared text and component styles (MM.* styles inherit from this empty base) -->
     <style name="MM" />
 
     <!-- Large white title on the sky, with a soft shadow so it stays readable on light clouds -->

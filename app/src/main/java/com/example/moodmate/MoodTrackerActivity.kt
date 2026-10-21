@@ -6,7 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.coroutines.*
+import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class MoodTrackerActivity : AppCompatActivity() {
 
@@ -46,7 +49,7 @@ class MoodTrackerActivity : AppCompatActivity() {
         val userId = dbHelper.getUserId(username ?: "")
 
         if (userId != -1) {
-            GlobalScope.launch(Dispatchers.IO) {
+            lifecycleScope.launch(Dispatchers.IO) {
                 try {
                     val moodEntries = moodDatabase.moodDao().getMoodHistory(userId)
 

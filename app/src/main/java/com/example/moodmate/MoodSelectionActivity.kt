@@ -5,7 +5,10 @@ import android.os.Bundle
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.coroutines.*
+import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class MoodSelectionActivity : AppCompatActivity() {
 
@@ -70,8 +73,11 @@ class MoodSelectionActivity : AppCompatActivity() {
 
                 if (userId != -1) {
                     val moodEntry = MoodEntry(userId = userId, mood = selectedMood!!, intensity = moodIntensity)
-                    GlobalScope.launch(Dispatchers.IO) {
-                        MoodDatabase.getDatabase(this@MoodSelectionActivity).moodDao().insertMood(moodEntry)
+                    lifecycleScope.launch {
+                        withContext(Dispatchers.IO) {
+                            MoodDatabase.getDatabase(this@MoodSelectionActivity).moodDao().insertMood(moodEntry)
+                        }
+                        Toast.makeText(this@MoodSelectionActivity, "Mood saved", Toast.LENGTH_SHORT).show()
                     }
                 }
 
