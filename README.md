@@ -62,4 +62,4 @@ MoodMate was a two-person project for our App Development course. As lead develo
 
 ## Author
 
-**Gabriel C. Bognot**: [GitHub](https://github.com/gabbogs) · [LinkedIn](https://www.linkedin.com/in/gabbogs/)
+**Gabriel Bognot**: [GitHub](https://github.com/gabbogs) · [LinkedIn](https://www.linkedin.com/in/gabbogs/)
